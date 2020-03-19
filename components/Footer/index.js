@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="container-social">
           <img src="/twitter-logo.png" />
           <img src="/facebook-logo.png" />
-          <img src="/instagram-logo.png" />
+          <img src="/rss-feed-logo.png" />
         </div>
       </div>
 
@@ -56,6 +56,7 @@ const Footer = () => {
         .container-social img {
           width: 2em;
           margin: 0 0.5em;
+          cursor: pointer;
         }
 
         @media (max-width: 1280px) {
