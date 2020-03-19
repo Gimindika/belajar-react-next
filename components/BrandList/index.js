@@ -17,7 +17,7 @@ const BrandList = () => {
           const { attribute_id, name, logo } = brand;
           return (
             <div className="container-brand">
-              <Brand key={attribute_id} name={name} logo={logo} />;
+              <Brand key={attribute_id} name={name} logo={logo} />
               <div className="mask-brand"></div>
             </div>
           );
@@ -52,6 +52,15 @@ const BrandList = () => {
         @media (max-width: 1280px) {
           .container-brand:nth-of-type(2n) {
             margin: 0;
+          }
+        }
+
+        @media (max-width: 500px) {
+          .container-main {
+            width: 100vw;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
           }
         }
       `}</style>
