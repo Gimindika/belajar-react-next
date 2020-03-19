@@ -1,8 +1,6 @@
-// import Carousel from "../components/Carousel";
-import Carousel from "../components/CarouselComponent";
 import BrandList from "../components/BrandList";
-import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
+import Carousel from "../components/CarouselComponent";
+import withLayout from "../components/Layout";
 
 const HomePage = () => {
   const fakeData = [
@@ -47,20 +45,13 @@ const HomePage = () => {
   return (
     <div>
       <div className="container-main">
-        <NavBar />
         <Carousel data={fakeData} timer={5000} />
-      </div>{" "}
-      {/* end carosel with nav */}
+      </div>
       <div>
-        {/* lower section */}
         <div className="container-content">
-          {/* container */}
           <BrandList />
-        </div>{" "}
-        {/* end container */}
-      </div>{" "}
-      {/* end lower section */}
-      <Footer />
+        </div>
+      </div>
       <style jsx>{`
         .container-main {
           display: flex;
@@ -84,4 +75,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default withLayout(HomePage);

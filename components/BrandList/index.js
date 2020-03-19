@@ -7,7 +7,6 @@ const BrandList = () => {
   let brandList;
   if (data) {
     brandList = data.getBrandList.filter(brand => brand.logo !== "");
-    console.log("brands", brandList);
   }
 
   return (
@@ -16,8 +15,8 @@ const BrandList = () => {
         brandList.map(brand => {
           const { attribute_id, name, logo } = brand;
           return (
-            <div className="container-brand">
-              <Brand key={attribute_id} name={name} logo={logo} />
+            <div className="container-brand" key={attribute_id}>
+              <Brand  name={name} logo={logo} />
               <div className="mask-brand"></div>
             </div>
           );
