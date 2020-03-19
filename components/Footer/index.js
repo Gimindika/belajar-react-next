@@ -57,6 +57,29 @@ const Footer = () => {
           width: 2em;
           margin: 0 0.5em;
         }
+
+        @media (max-width: 1280px) {
+          .container-right,
+          .container-left {
+            flex-direction: column;
+            justify-content: center;
+          }
+
+          .container-left {
+            align-items: flex-start;
+          }
+          .container-right {
+            align-items: flex-end;
+          }
+
+          .container-left p {
+            margin: 0.25em;
+          }
+
+          .container-mid p {
+            text-align:center;
+          }
+        }
       `}</style>
     </div>
   );
